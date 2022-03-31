@@ -163,7 +163,7 @@ main {
     width: 100%;
     display: grid;
     justify-content: center;
-    grid-template: minmax(400px, 520px) 60px 1fr/ 1fr minmax(590px, 2fr) 1fr;
+    grid-template: minmax(400px, 520px) 60px 1fr/ 1fr minmax(390px, 2fr) 1fr;
     align-items: center;
 }
 
@@ -172,8 +172,9 @@ main {
     bottom: 100px;
     grid-area: 1 / 2 / 2 / 3;
     width: 100%;
+    min-width: 390px;
     font-family: inspiration, Georgia, 'Times New Roman', Times, serif;
-    font-size: 5rem;
+    font-size: calc(3rem + 2vw);
     white-space: nowrap;
     text-align: center;
     z-index: 2;
@@ -206,7 +207,8 @@ header h1 {
     display: flex;
     grid-area: 2 / 2;
     background-color: #b3caf5;
-    width: minmax(400px, 100%);
+    width: 100%;
+    min-width: 390px;
     justify-content: space-around;
     border-radius: 5px;
     z-index: 2;
@@ -214,7 +216,7 @@ header h1 {
 
 #navBar button {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 1.2rem;
+    font-size: calc(1rem + .50vw);
     font-weight: bolder;
     background-color: #b3caf5;
     border-radius: 3px;
@@ -228,6 +230,7 @@ header h1 {
 }
 
 #info {
+    font-size: calc(1rem + 1vw);
     text-align: center;
     grid-area: 3 / 2;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -295,100 +298,32 @@ input:focus {
 }
 
 /* IPHONE QUERY DATA  */
-@media only screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) {
-
-    html,
-    body {
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-    }
-
-    #content {
-        width: 100%;
-        display: grid;
-        justify-content: center;
-        grid-template: 1fr 1fr 1fr/ 1fr;
-        align-items: center;
-    }
+@media only screen and (max-device-width: 600px) {
 
     #header {
         position: relative;
-        top: 55px;
-        display: flex;
-        grid-area: 1 / 2;
-        width: 100%;
-        font-family: inspiration, Georgia, 'Times New Roman', Times, serif;
-        font-size: 3rem;
-        white-space: nowrap;
-        text-align: center;
-        z-index: 2;
-    }
-
-    header h1 {
-        width: 100%;
-        background-color: rgba(245, 222, 179, 0.705);
-        padding: 10px 10px;
-
-    }
-
-    #videoContainer {
-        position: relative;
-        bottom: 90px;
-        grid-area: 1 / 2;
-        height: 390px;
-        display: flex;
-        z-index: 0;
-        margin: 5px 0;
-    }
-
-    #videoBanner {
-        justify-content: center;
-        opacity: 85%;
+        bottom: 170px;
     }
 
     #navBar {
         display: flex;
         flex-direction: column;
-        width: 100%;
-        background-color: #b3caf5;
-        min-width: 300px;
-        justify-content: space-around;
-        border-radius: 50px;
         position: relative;
-        bottom: 100px;
-        margin: 5px 0;
+        bottom: 60px;
+        margin-bottom: 10px;
     }
 
-
-
-    #navBar button {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size: 1rem;
-        font-weight: bolder;
-        background-color: #b3caf5;
-        border-radius: 3px;
-        border: none;
+    #videoContainer {
+        margin-bottom: 10px;
     }
-
-    #info {
-        position: relative;
-        bottom: 120px;
-        grid-area: 3 / 2;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        text-align: center;
-    }
-
-
-
 
     #imgContain {
         position: relative;
-        bottom: 50px;
+        top: 70px;
         left: 31%;
         overflow: hidden;
         width: 150px;
-        margin: 5px 0;
+        margin-bottom: 50px;
     }
 
     figure {
@@ -436,26 +371,12 @@ input:focus {
             left: 100%;
         }
     }
-
-    #formContainer {
-        position: relative;
-        bottom: 80px;
-        display: flex;
-        flex-wrap: wrap;
-
-    }
-
-    input,
-    #submitBtn {
-        margin-top: 4px;
-    }
 }
 
 
+/* @media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) {
 
-@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) {
-
-    /* CSS */
+     CSS 
     html,
     body {
         width: 100%;
@@ -610,4 +531,4 @@ input:focus {
         margin-top: 4px;
 
     }
-}
+} */
