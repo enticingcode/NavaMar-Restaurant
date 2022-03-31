@@ -339,6 +339,7 @@ input:focus {
         height: 390px;
         display: flex;
         z-index: 0;
+        margin: 5px 0;
     }
 
     #videoBanner {
@@ -356,6 +357,7 @@ input:focus {
         border-radius: 50px;
         position: relative;
         bottom: 100px;
+        margin: 5px 0;
     }
 
 
@@ -386,6 +388,7 @@ input:focus {
         left: 31%;
         overflow: hidden;
         width: 150px;
+        margin: 5px 0;
     }
 
     figure {
@@ -439,6 +442,7 @@ input:focus {
         bottom: 80px;
         display: flex;
         flex-wrap: wrap;
+
     }
 
     input,
@@ -456,7 +460,6 @@ input:focus {
     body {
         width: 100%;
         height: 100%;
-        overflow: hidden;
     }
 
     #content {
@@ -478,6 +481,7 @@ input:focus {
         white-space: nowrap;
         text-align: center;
         z-index: 2;
+        margin: 4px 0;
     }
 
     header h1 {
@@ -494,6 +498,7 @@ input:focus {
         height: 390px;
         display: flex;
         z-index: 0;
+        margin: 4px 0;
     }
 
     #videoBanner {
@@ -512,6 +517,7 @@ input:focus {
         position: relative;
         bottom: 90px;
         z-index: 2;
+        margin: 4px 0;
     }
 
 
@@ -531,6 +537,7 @@ input:focus {
         grid-area: 3 / 2;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         text-align: center;
+        margin: 4px 0;
     }
 
 
@@ -542,6 +549,7 @@ input:focus {
         left: 31%;
         overflow: hidden;
         width: 150px;
+        margin: 4px 0;
     }
 
     figure {
@@ -600,5 +608,6 @@ input:focus {
     input,
     #submitBtn {
         margin-top: 4px;
+
     }
 }
