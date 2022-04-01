@@ -163,7 +163,7 @@ main {
     width: 100%;
     display: grid;
     justify-content: center;
-    grid-template: minmax(400px, 520px) 60px 1fr/ 1fr minmax(390px, 2fr) 1fr;
+    grid-template: 1fr 1fr 10fr / 1fr 1fr 1fr;
     align-items: center;
 }
 
@@ -189,8 +189,7 @@ header h1 {
 #videoContainer {
     display: flex;
     width: 100%;
-    min-height: 300px;
-    max-width: 1500px;
+    min-width: 390px;
     justify-content: center;
     grid-area: 1 / 2;
     border-radius: 5px;
@@ -200,7 +199,6 @@ header h1 {
 #videoBanner {
     width: 100%;
     opacity: 92%;
-    border-radius: 5px;
 }
 
 #navBar {
@@ -208,10 +206,10 @@ header h1 {
     grid-area: 2 / 2;
     background-color: #b3caf5;
     width: 100%;
-    min-width: 390px;
     justify-content: space-around;
-    border-radius: 5px;
     z-index: 2;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
 }
 
 #navBar button {
@@ -267,38 +265,33 @@ figure {
 }
 
 
-#formContainer {
+#contactContainer {
     grid-area: 3 / 2;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 30px;
 }
 
-input {
-    width: 200px;
+#contactContainer img {
     margin-top: 20px;
-    height: 30px;
-    border-radius: 3px;
-    border: rgb(212, 212, 212) 1px solid;
+    width: 450px;
 }
 
-input:focus {
-    outline: #91a8d1 1px solid;
-}
 
-#Message {
-    width: 200px;
-    height: 60px;
-}
 
-#submitBtn {
-    margin-top: 20px;
-    width: 80px;
-    height: 50px;
-}
 
 /* IPHONE QUERY DATA  */
 @media only screen and (max-device-width: 600px) {
+
+
+    #content {
+        width: 100%;
+        display: grid;
+        justify-content: center;
+        grid-template: 2fr 1fr 10fr / 1fr 1fr 1fr;
+        align-items: center;
+    }
 
     #header {
         position: relative;
@@ -314,7 +307,8 @@ input:focus {
     }
 
     #videoContainer {
-        margin-bottom: 10px;
+        position: relative;
+        bottom: 10px;
     }
 
     #imgContain {
@@ -374,7 +368,7 @@ input:focus {
 }
 
 
-/* @media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) {
+/* @media only screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) {
 
      CSS 
     html,

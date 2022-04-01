@@ -3,7 +3,7 @@ let content = document.querySelector("#content");
 function loadAbout() {
     let resetImgDiv = document.querySelector("#imgContain");
     let infoDivSelector = document.querySelector("#info");
-    let containerSelection = document.querySelector("#formContainer");
+    let containerSelection = document.querySelector("#contactContainer");
 
     if (resetImgDiv != null) {
         resetImgDiv.remove();

@@ -25,6 +25,7 @@ function loadBanner() {
     video.src = "/video/POKEVID.mp4"
     video.autoplay = true;
     video.muted = true;
+    video.playsInline = true;
     video.loop = true;
     video.setAttribute('id', 'videoBanner');
 

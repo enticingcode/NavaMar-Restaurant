@@ -13,39 +13,32 @@ function loadContact() {
         resetImgDiv.remove();
     }
 
-    let formContainer = document.createElement("div");
-    formContainer.setAttribute("id", "formContainer");
-    let containerSelection = document.querySelector("#formContainer");
-
-
-    let formReqs = ["First Name", "Last Name", "E-Mail", "Phone Number", "Message"]
+    let contactContainer = document.createElement("div");
+    contactContainer.setAttribute("id", "contactContainer");
+    let containerSelection = document.querySelector("#contactContainer");
 
 
     if (containerSelection != null) {
         containerSelection.remove();
     }
 
-    for (let i = 0; i < 5; i++) {
-        let formInput = document.createElement("input");
-        formInput.type = "text";
-        formInput.id = `${formReqs[i]}`
-        formInput.placeholder = `${formReqs[i]}`
-        formContainer.append(formInput);
-    }
+
+    let phoneNum = document.createElement("p");
+    let address = document.createElement("p");
+    let map = document.createElement("img");
 
 
-    let submitBTN = document.createElement("button");
-    submitBTN.setAttribute("id", "submitBtn");
-    submitBTN.innerText = "Submit"
+    phoneNum.innerText = "(626) 534-2012";
+    address.innerText = "423 N College Ave, Fayetteville, AR 72701";
+    map.src = "/images/map.png"
 
-    formContainer.append(submitBTN);
-    content.append(formContainer);
+    contactContainer.append(phoneNum);
+    contactContainer.append(address);
+    contactContainer.append(map);
 
-    function alertVisitor() {
-        alert("dang, the button's broken, I guess no Poke for u")
-    }
+    content.append(contactContainer);
 
-    submitBTN.addEventListener("click", alertVisitor)
+
 
 
 }

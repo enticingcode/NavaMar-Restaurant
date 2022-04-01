@@ -4,7 +4,7 @@ function loadFood() {
     // HIDE INFORMATION BLOCK //
     let content = document.querySelector("#content");
     let infoDiv = document.querySelector("#info");
-    let containerSelection = document.querySelector("#formContainer");
+    let containerSelection = document.querySelector("#contactContainer");
 
     if (infoDiv != null) {
         infoDiv.remove();
