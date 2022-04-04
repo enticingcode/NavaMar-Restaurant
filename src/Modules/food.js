@@ -1,5 +1,7 @@
 
 function loadFood() {
+    const navBar = document.querySelector("#navBar");
+    navBar.classList.add("dissapearMenu");
 
     // HIDE INFORMATION BLOCK //
     let content = document.querySelector("#content");

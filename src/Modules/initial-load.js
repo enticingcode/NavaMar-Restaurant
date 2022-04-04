@@ -22,7 +22,7 @@ function loadBanner() {
 
     // banner video // 
     let video = document.createElement("video");
-    video.src = "/video/POKEVID.mp4"
+    video.src = "/video/POKEVID.mp4";
     video.autoplay = true;
     video.muted = true;
     video.playsInline = true;
@@ -49,6 +49,7 @@ function loadNav(id) {
     let aboutUs = createBtns("navBtn", "About", "about");
     let foodBtn = createBtns("navBtn", "Food", "food");
     let contact = createBtns("navBtn", "Contact", "contact");
+    navBar.classList.add("dissapearMenu")
     navBar.append(homeBtn);
     navBar.append(aboutUs);
     navBar.append(foodBtn);
@@ -71,23 +72,18 @@ function populateHome() {
 }
 
 
-// WORKING ON THIS ////////////////////////////////////
-// function appendVideos() {
-//     let videoDiv = document.createElement("div");
-//     let video = document.createElement("video");
-//     video.src
-// }
-
 function loadPage() {
+
     // Header & Vid // 
     let header = createHeader("header", "Bienvenidos a NavaMar");
     let videoContainer = loadBanner();
+    let burgerMenu = document.querySelector("#menu");
 
     // Nav Bar //
     let navBar = loadNav("navBar")
     contentDiv.append(videoContainer);
     contentDiv.append(header);
-    contentDiv.append(navBar);
+    burgerMenu.append(navBar);
 
     // Home Page brief //
     populateHome();
@@ -103,6 +99,24 @@ function loadPage() {
     about.addEventListener("click", loadAbout);
     food.addEventListener("click", loadFood);
     contact.addEventListener("click", loadContact);
+
+    // DROP DOWN MENU LISTENER //
+    const dropDown = document.querySelector("#arrowBtn");
+
+    dropDown.addEventListener("click", engageMenu);
+
+
+
+    function engageMenu() {
+        if (navBar.classList == "dissapearMenu") {
+            navBar.classList.remove("dissapearMenu");
+        }
+        else {
+            navBar.classList.add("dissapearMenu");
+        }
+    }
+
+
 }
 
 

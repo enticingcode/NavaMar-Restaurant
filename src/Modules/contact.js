@@ -1,9 +1,9 @@
 
-
 function loadContact() {
     let content = document.querySelector("#content");
     let infoDiv = document.querySelector("#info");
     let resetImgDiv = document.querySelector("#imgContain");
+    const navBar = document.querySelector("#navBar");
 
     if (infoDiv != null) {
         infoDiv.remove();
@@ -38,7 +38,7 @@ function loadContact() {
 
     content.append(contactContainer);
 
-
+    navBar.classList.add("dissapearMenu");
 
 
 }

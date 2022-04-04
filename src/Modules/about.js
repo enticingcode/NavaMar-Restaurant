@@ -1,9 +1,13 @@
-let content = document.querySelector("#content");
+
 
 function loadAbout() {
     let resetImgDiv = document.querySelector("#imgContain");
     let infoDivSelector = document.querySelector("#info");
     let containerSelection = document.querySelector("#contactContainer");
+    let content = document.querySelector("#content");
+    const navBar = document.querySelector("#navBar");
+    navBar.classList.add("dissapearMenu");
+
 
     if (resetImgDiv != null) {
         resetImgDiv.remove();
