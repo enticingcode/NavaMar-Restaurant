@@ -299,6 +299,10 @@ figure {
 /* IPHONE QUERY DATA  */
 @media only screen and (max-device-width: 1010px) {
 
+    html,
+    body {
+        overflow: hidden;
+    }
 
     #content {
         width: 100%;
